@@ -84,7 +84,7 @@ redshifts = np.loadtxt("idmask_fitting_tests.cat", usecols=2)
 fit_cat = pipes.fit_catalogue(IDs, fit_instructions, load_legac_phot, run="phot",
                               cat_filt_list=filt_list, vary_filt_list=False,
                               redshifts=redshifts, redshift_sigma=0.025,
-                              make_plots=False, time_calls=True,
+                              make_plots=True, time_calls=True,
                               spectrum_exists=False)
 
 fit_cat.fit(verbose=True)
