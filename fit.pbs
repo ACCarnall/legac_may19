@@ -1,0 +1,28 @@
+# The shell
+#PBS -S /bin/bash
+
+# Don't email me
+#PBS -M donotemailme@roe.ac.uk
+
+# The number of nodes and the number of processes per node
+#PBS -l nodes=1:ppn=32
+
+# The wall time for the calculation in HH:MM:SS
+#PBS -l walltime=720:00:00
+
+# Where the messages go
+#PBS -o /home/adamc/pbs_output/log
+
+# Where the errors go
+#PBS -e /home/adamc/pbs_output/log.error
+
+
+##### ##### REMEMBER TO CHANGE ##### #####
+
+export PATH="/home/adamc/anaconda/bin:$PATH"
+
+DIR=/home/adamc/legac_may19
+
+cd $DIR
+
+mpirun -n 32 python fit_legac.py
