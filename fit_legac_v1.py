@@ -82,7 +82,7 @@ fit_instructions = get_fit_instructions()
 IDs = table.index
 redshifts = np.loadtxt("idmask_fitting_tests.cat", usecols=2)
 
-fit_cat = pipes.fit_catalogue(IDs, fit_instructions, load_legac, run="v1",
+fit_cat = pipes.fit_catalogue(IDs, fit_instructions, load_legac, run="v2",
                               cat_filt_list=filt_list, vary_filt_list=False,
                               redshifts=redshifts, redshift_sigma=0.025,
                               make_plots=True, time_calls=True)

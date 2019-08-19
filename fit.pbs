@@ -5,7 +5,7 @@
 #PBS -M donotemailme@roe.ac.uk
 
 # The number of nodes and the number of processes per node
-#PBS -l nodes=1:ppn=32
+#PBS -l nodes=1:ppn=48
 
 # The wall time for the calculation in HH:MM:SS
 #PBS -l walltime=720:00:00
@@ -25,4 +25,4 @@ DIR=/home/adamc/legac_may19
 
 cd $DIR
 
-mpirun -n 32 python fit_legac.py
+mpirun -n 48 python fit_legac.py
